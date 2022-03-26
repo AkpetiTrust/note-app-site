@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: #181818;
+  height: 100vh;
 }
 
 *,
@@ -16,7 +17,7 @@ body {
 }
 
 .container {
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   position: relative;
   padding: $left;
