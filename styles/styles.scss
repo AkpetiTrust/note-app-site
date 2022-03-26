@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+$left: 20px;
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #181818;
+  height: 100vh;
+  overflow: hidden;
+  padding: $left;
+  padding-top: 80px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.logo {
+  position: absolute;
+  left: $left;
+  top: 20px;
+}
+
+.title {
+  font-size: 1.2em;
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.col-1 {
+  img {
+    max-width: 100%;
+  }
+}
+
+.col-2 {
+  p {
+    font-size: 1em;
+    &:first-child {
+      margin-bottom: 20px;
+    }
+    .label {
+      font-weight: 700;
+    }
+  }
+}
+
+.btn {
+  all: unset;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  font-weight: 700;
+  background-color: #33ca7f;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 8px;
+  font-size: 0.8em;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &.disabled {
+    background-color: rgba(51, 202, 127, 0.35);
+    pointer-events: none;
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.bottom,
+.top {
+  position: absolute;
+  width: 100px;
+  z-index: -1;
+}
+
+.bottom {
+  left: -5px;
+  bottom: -30px;
+}
+
+.top {
+  right: -5px;
+  top: -10px;
+}
+
+@media screen and(max-width:850px) {
+  .title {
+    font-size: 0.8em;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    display: block;
+    max-width: 500px;
+
+    .col-1 {
+      margin-bottom: 30px;
+    }
+
+    .col-2 p {
+      font-size: 0.8em;
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .btn {
+    margin: 30px 0;
+  }
+
+  footer {
+    font-size: 1em;
+    bottom: 20px;
+  }
+
+  .bottom,
+  .top {
+    width: 80px;
+  }
+
+  .bottom {
+    bottom: 90px;
+  }
+}
